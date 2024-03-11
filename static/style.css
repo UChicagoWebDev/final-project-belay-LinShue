@@ -1,0 +1,130 @@
+body {
+  font-family: 'Helvetica', sans-serif; 
+  margin: 0;
+  padding: 0;
+}
+
+.main-container { 
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hidden-ui, 
+.logged-in-ui { 
+  display: none;
+}
+
+.nav-channel {
+  width: 25%; 
+  border-right: 2px solid #ccc; 
+  padding: 15px; 
+  background-color: #f3f2f7; 
+}
+
+.nav-channel h2 { 
+  font-size: 22px; 
+  margin-bottom: 15px; 
+}
+
+.nav-channel ul { 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-channel li { 
+  margin-bottom: 10px;
+}
+
+.chat-messages { 
+  flex-grow: 1; 
+  padding: 20px;
+}
+
+.chat-messages h2 { 
+  font-size: 26px; 
+  margin-bottom: 15px; 
+}
+
+.message-container {
+  max-height: 450px;
+  overflow-y: scroll; 
+}
+
+.input-message { 
+  margin-top: 25px; 
+}
+
+#inputMessage { 
+  width: 75%; 
+  padding: 12px; 
+}
+
+.feedback-panel { 
+  display: none;
+  border: 2px solid #bbb; 
+  padding: 12px; 
+}
+
+#closeFeedback { 
+  margin-top: 15px;
+  background-color: #5CB85C; 
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+#sendButton { 
+  width: 25%; 
+  padding: 12px; 
+  background-color: #5CB85C; 
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#sendButton:hover {
+  background-color: #4cae4c; 
+}
+
+#newChannelButton { 
+  padding: 12px; 
+  background-color: #337AB7; 
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#newChannelButton:hover {
+  background-color: #286090;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+      flex-direction: column;
+  }
+
+  .nav-channel {
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid #ccc; 
+  }
+
+  .chat-messages {
+      width: 100%;
+  }
+
+  .feedback-panel {
+      width: 100%;
+  }
+
+  .nav-channel li {
+      text-align: center;
+  }
+
+  #closeFeedback {
+      width: 100%;
+  }
+}
