@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Belay Chat</title>
+</head>
+<body>
+
+  <div id="hidden-ui" class="ui-wrapper"> 
+    <div id="registration-form" class="input-container"> 
+      <h2>Create a New Account</h2>
+      <form>
+        <input type="text" placeholder="Username" id="register-username"> 
+        <input type="password" placeholder="Password" id="register-password">  
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+
+    <div id="access-form" class="input-container"> 
+      <h2>Sign In</h2>
+      <form>
+        <input type="text" placeholder="Username" id="access-username">  
+        <input type="password" placeholder="Password" id="access-password">  
+        <button type="submit">Log In</button>
+      </form>
+    </div>
+
+    <div id="access-warning">  
+      <p>You need to log in or sign up to access this room.</p>
+    </div>
+  </div>
+
+  <div id="logged-in-ui" class="ui-wrapper">  
+    <div class="top-nav">  
+        <button id="exit-btn">Log Out</button>  
+        <button id="modify-username-btn">Change Username</button>  
+        <button id="modify-password-btn">Change Password</button>  
+    </div>
+
+    <div class="main-container">   
+      <div class="nav-channel">   
+        <h2>Channels</h2>
+        <ul>
+        </ul>
+        <button id="newChannelButton">Create Channel</button>     
+      </div>
+
+      <div class="chat-messages">   
+        <h2>Channel Name</h2>
+        <div class="message-container">   
+        </div>
+        <div class="input-message">   
+          <textarea id="inputMessage" placeholder="Type your message..."></textarea>     
+          <button id="sendButton">Send</button>     
+        </div>
+        <button id="respond-btn">Reply</button>  
+      </div>
+      <div class="feedback-panel">   
+        <button id="closeFeedback">Dismiss Replies</button>     
+      </div>
+  
+      <div class="emoji-feedback">  
+      </div>
+  
+      <div class="user-reactions">  
+        <p>Users who reacted:</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>  
+</body>
+</html>
